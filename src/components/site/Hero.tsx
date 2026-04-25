@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Search, Zap, IndianRupee, ShieldCheck, Star } from "lucide-react";
+import { Search, Zap, ShieldCheck, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImg from "@/assets/hero-cctv-home.jpg";
 
 const popular = ["CCTV Installation", "Smart Locks", "Intercom", "Biometric"];
 
@@ -10,28 +11,26 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden border-b border-border">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(60% 50% at 80% 0%, oklch(0.95 0.05 35 / 0.5), transparent 60%), radial-gradient(50% 40% at 0% 100%, oklch(0.95 0.04 270 / 0.4), transparent 60%)",
-        }}
-      />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-12 md:px-6 md:py-20 lg:grid-cols-12 lg:gap-12">
-        <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium shadow-soft">
-            <span className="flex h-2 w-2 rounded-full bg-success" />
-            Same-day service available
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-10 md:px-6 md:py-16 lg:grid-cols-12 lg:gap-12 lg:py-20">
+        <div className="lg:col-span-6 xl:col-span-7 flex flex-col justify-center">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium shadow-soft">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
+            </span>
+            Same-day service available in 5 cities
           </div>
-          <h1 className="mt-5 font-display text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="mt-5 font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-[4.25rem]">
             Book trusted{" "}
-            <span className="bg-gradient-to-r from-accent to-[oklch(0.6_0.2_15)] bg-clip-text text-transparent">
-              security experts
+            <span className="relative inline-block">
+              <span className="relative z-10 bg-gradient-to-br from-accent to-[oklch(0.55_0.2_15)] bg-clip-text text-transparent">
+                security experts
+              </span>
+              <span aria-hidden className="absolute bottom-1 left-0 right-0 -z-0 h-3 rounded-sm bg-accent/15" />
             </span>{" "}
             near you
           </h1>
-          <p className="mt-4 max-w-xl text-base text-muted-foreground md:text-lg">
+          <p className="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
             CCTV • Intercom • Biometric • Smart Locks — installed by verified pros, with transparent pricing and a 6-month warranty.
           </p>
 
@@ -71,84 +70,107 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="mt-8 grid grid-cols-3 gap-3 max-w-lg">
-            <Trust icon={<Zap className="h-4 w-4 text-accent" />} label="Same-day service" />
-            <Trust icon={<IndianRupee className="h-4 w-4 text-accent" />} label="Starting ₹499" />
-            <Trust icon={<ShieldCheck className="h-4 w-4 text-accent" />} label="6-mo warranty" />
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-border pt-6">
+            <Stat value="4.8★" label="12,400+ reviews" />
+            <Stat value="1,000+" label="Installations done" />
+            <Stat value="6 mo" label="Warranty included" />
           </div>
         </div>
 
-        <div className="relative lg:col-span-5">
-          <div className="relative mx-auto max-w-md">
-            <div className="rounded-3xl border border-border bg-card p-5 shadow-elevated">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-medium text-muted-foreground">Next available slot</div>
-                  <div className="mt-0.5 font-display text-lg font-bold">Today, 4:00 PM</div>
-                </div>
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-success/15 text-success">
+        <div className="relative lg:col-span-6 xl:col-span-5">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-elevated">
+            <img
+              src={heroImg}
+              alt="Modern living room with a discreet security camera installed near the ceiling"
+              className="h-full w-full object-cover"
+              width={1024}
+              height={1280}
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, transparent 40%, oklch(0.18 0.02 250 / 0.55) 100%)",
+              }}
+            />
+
+            {/* Floating: live monitoring badge */}
+            <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-background/90 px-3 py-1.5 text-xs font-semibold shadow-card backdrop-blur">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-destructive" />
+              </span>
+              Live • Recording
+            </div>
+
+            {/* Floating: rating chip */}
+            <div className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-card">
+              <Star className="h-3.5 w-3.5 fill-warning text-warning" />
+              4.8 · Verified pros
+            </div>
+
+            {/* Floating booking card (bottom-left) */}
+            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/40 bg-card/95 p-3 shadow-elevated backdrop-blur sm:bottom-5 sm:left-5 sm:right-auto sm:max-w-[280px]">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-accent-foreground">
                   <Zap className="h-5 w-5" />
                 </div>
-              </div>
-
-              <div className="mt-5 space-y-3">
-                {[
-                  { name: "CCTV Installation", price: "From ₹1,499", tone: "bg-[oklch(0.95_0.04_270)] text-[oklch(0.45_0.18_270)]" },
-                  { name: "Smart Door Locks", price: "From ₹2,499", tone: "bg-[oklch(0.95_0.04_230)] text-[oklch(0.5_0.15_230)]" },
-                  { name: "Biometric Attendance", price: "From ₹1,799", tone: "bg-[oklch(0.95_0.04_300)] text-[oklch(0.5_0.18_300)]" },
-                ].map((item) => (
-                  <div key={item.name} className="flex items-center justify-between rounded-xl border border-border bg-background p-3">
-                    <div className="flex items-center gap-3">
-                      <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${item.tone}`}>
-                        <ShieldCheck className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold">{item.name}</div>
-                        <div className="text-xs text-muted-foreground">{item.price}</div>
-                      </div>
-                    </div>
-                    <Button size="sm" variant="soft" asChild>
-                      <Link to="/book">Book</Link>
-                    </Button>
+                <div className="flex-1">
+                  <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+                    Next available
                   </div>
-                ))}
-              </div>
-
-              <div className="mt-5 flex items-center justify-between rounded-xl bg-primary p-3 text-primary-foreground">
-                <div className="flex items-center gap-2 text-sm">
-                  <Star className="h-4 w-4 fill-warning text-warning" />
-                  <span className="font-semibold">4.8</span>
-                  <span className="opacity-80">• 12,400+ reviews</span>
+                  <div className="font-display text-sm font-bold">Today, 4:00 PM</div>
                 </div>
-                <span className="rounded-full bg-accent px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide">
-                  Verified pros
-                </span>
+                <Button size="sm" variant="cta" asChild>
+                  <Link to="/book">Book</Link>
+                </Button>
               </div>
             </div>
 
-            <div className="absolute -left-4 -top-4 hidden rounded-2xl bg-card p-3 shadow-elevated sm:block">
-              <div className="flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-success/15 text-success">
-                  <ShieldCheck className="h-4 w-4" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold">Warranty included</div>
-                  <div className="text-[10px] text-muted-foreground">6 months on every install</div>
-                </div>
+            {/* Floating: warranty badge */}
+            <div className="absolute -left-3 top-1/3 hidden rotate-[-6deg] rounded-2xl bg-card px-3 py-2 shadow-elevated lg:flex lg:items-center lg:gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-success/15 text-success">
+                <ShieldCheck className="h-4 w-4" />
+              </div>
+              <div>
+                <div className="text-xs font-bold">6 mo warranty</div>
+                <div className="text-[10px] text-muted-foreground">Every installation</div>
+              </div>
+            </div>
+
+            {/* Floating: starting price */}
+            <div className="absolute -right-2 bottom-1/3 hidden rotate-[4deg] items-center gap-2 rounded-2xl bg-primary px-3 py-2 text-primary-foreground shadow-elevated lg:flex">
+              <Sparkles className="h-4 w-4 text-accent" />
+              <div>
+                <div className="text-[10px] uppercase tracking-wide opacity-70">Starting</div>
+                <div className="font-display text-sm font-bold">₹499</div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* trusted-by strip */}
+      <div className="border-t border-border bg-surface">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-3 px-4 py-5 text-xs font-medium text-muted-foreground md:px-6">
+          <span className="opacity-70">We install only authorised products from</span>
+          {["Hikvision", "CP Plus", "Yale", "Godrej", "Realtime", "Honeywell"].map((b) => (
+            <span key={b} className="font-display text-sm font-bold text-foreground/70 tracking-tight">
+              {b}
+            </span>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function Trust({ icon, label }: { icon: React.ReactNode; label: string }) {
+function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2 text-xs font-medium shadow-soft">
-      {icon}
-      <span>{label}</span>
+    <div>
+      <div className="font-display text-xl font-bold leading-none">{value}</div>
+      <div className="mt-1 text-xs text-muted-foreground">{label}</div>
     </div>
   );
 }
