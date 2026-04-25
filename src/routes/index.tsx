@@ -9,6 +9,7 @@ import { Packages } from "@/components/site/Packages";
 import { PricingStrip } from "@/components/site/PricingStrip";
 import { WhyChooseUs } from "@/components/site/WhyChooseUs";
 import { Reviews } from "@/components/site/Reviews";
+import { TechnicianBand } from "@/components/site/TechnicianBand";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,8 +40,9 @@ function Index() {
         <CategoryGrid />
         <HowItWorks />
         <Packages />
-        <PricingStrip />
+        <TechnicianBand />
         <WhyChooseUs />
+        <PricingStrip />
         <Reviews />
       </main>
       <Footer />
