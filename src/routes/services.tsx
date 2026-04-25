@@ -42,23 +42,35 @@ function ServicesPage() {
                   key={s.id}
                   to="/book"
                   search={{ service: s.id }}
-                  className="group rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-0.5 hover:shadow-elevated"
+                  className="group overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition hover:-translate-y-1 hover:shadow-elevated"
                 >
-                  <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${tone.bg}`}>
-                    <Icon className={`h-6 w-6 ${tone.text}`} />
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={s.image}
+                      alt={s.name}
+                      loading="lazy"
+                      width={800}
+                      height={500}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <div className={`absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-xl ${tone.bg} shadow-soft`}>
+                      <Icon className={`h-5 w-5 ${tone.text}`} />
+                    </div>
                   </div>
-                  <h3 className="font-display text-lg font-semibold">{s.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{s.description}</p>
-                  <div className="mt-4 flex items-center justify-between text-sm">
-                    <span className="font-semibold">From ₹{s.startingPrice.toLocaleString("en-IN")}</span>
-                    <span className="inline-flex items-center gap-1 text-muted-foreground">
-                      <Clock className="h-3.5 w-3.5" /> {s.duration}
-                    </span>
+                  <div className="p-5">
+                    <h3 className="font-display text-lg font-semibold">{s.name}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{s.description}</p>
+                    <div className="mt-4 flex items-center justify-between text-sm">
+                      <span className="font-semibold">From ₹{s.startingPrice.toLocaleString("en-IN")}</span>
+                      <span className="inline-flex items-center gap-1 text-muted-foreground">
+                        <Clock className="h-3.5 w-3.5" /> {s.duration}
+                      </span>
+                    </div>
+                    <Button variant="soft" size="sm" className="mt-5 w-full justify-between">
+                      Book this service
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                    </Button>
                   </div>
-                  <Button variant="soft" size="sm" className="mt-5 w-full justify-between">
-                    Book this service
-                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-                  </Button>
                 </Link>
               );
             })}
