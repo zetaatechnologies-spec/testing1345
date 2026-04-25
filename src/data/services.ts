@@ -7,6 +7,13 @@ import {
   Lock,
   type LucideIcon,
 } from "lucide-react";
+import cctvImg from "@/assets/cat-cctv.jpg";
+import smartlockImg from "@/assets/cat-smartlock.jpg";
+import biometricImg from "@/assets/cat-biometric.jpg";
+import intercomImg from "@/assets/cat-intercom.jpg";
+import pkgCctvHome from "@/assets/pkg-cctv-home.jpg";
+import pkgShop from "@/assets/pkg-shop.jpg";
+import pkgOffice from "@/assets/pkg-office.jpg";
 
 export type Service = {
   id: string;
@@ -14,6 +21,7 @@ export type Service = {
   shortName: string;
   description: string;
   icon: LucideIcon;
+  image: string;
   startingPrice: number;
   duration: string;
   tone: "indigo" | "coral" | "emerald" | "amber" | "violet" | "sky";
@@ -26,6 +34,7 @@ export const services: Service[] = [
     shortName: "CCTV Install",
     description: "HD/4K cameras, NVR setup, mobile viewing",
     icon: Camera,
+    image: cctvImg,
     startingPrice: 1499,
     duration: "2–4 hrs",
     tone: "indigo",
@@ -36,6 +45,7 @@ export const services: Service[] = [
     shortName: "CCTV Repair",
     description: "Diagnose & fix cameras, recorders, cabling",
     icon: Wrench,
+    image: cctvImg,
     startingPrice: 499,
     duration: "1–2 hrs",
     tone: "coral",
@@ -46,6 +56,7 @@ export const services: Service[] = [
     shortName: "AMC",
     description: "Annual maintenance with priority support",
     icon: ShieldCheck,
+    image: pkgShop,
     startingPrice: 2999,
     duration: "Yearly",
     tone: "emerald",
@@ -56,6 +67,7 @@ export const services: Service[] = [
     shortName: "Intercom",
     description: "Audio/video door phones & wiring",
     icon: PhoneCall,
+    image: intercomImg,
     startingPrice: 1299,
     duration: "2–3 hrs",
     tone: "amber",
@@ -66,6 +78,7 @@ export const services: Service[] = [
     shortName: "Biometric",
     description: "Fingerprint & face recognition systems",
     icon: Fingerprint,
+    image: biometricImg,
     startingPrice: 1799,
     duration: "1–2 hrs",
     tone: "violet",
@@ -76,6 +89,7 @@ export const services: Service[] = [
     shortName: "Smart Locks",
     description: "Keyless entry, app & PIN access",
     icon: Lock,
+    image: smartlockImg,
     startingPrice: 2499,
     duration: "1–2 hrs",
     tone: "sky",
@@ -99,6 +113,7 @@ export const packages = [
     price: 8999,
     originalPrice: 11499,
     popular: false,
+    image: pkgCctvHome,
     features: [
       "2 × 2MP HD Dome Cameras",
       "4-Channel DVR with 1TB Storage",
@@ -114,6 +129,7 @@ export const packages = [
     price: 17999,
     originalPrice: 22999,
     popular: true,
+    image: pkgShop,
     features: [
       "4 × 4MP Bullet Cameras",
       "8-Channel NVR with 2TB Storage",
@@ -129,6 +145,7 @@ export const packages = [
     price: 14499,
     originalPrice: 18999,
     popular: false,
+    image: pkgOffice,
     features: [
       "Biometric Attendance (200 users)",
       "Smart Door Lock with App Access",
