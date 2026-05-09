@@ -9,9 +9,9 @@ import { Clock, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "All Security Services — SafeNest" },
+      { title: "All Security Services — Zetaa Technologies" },
       { name: "description", content: "Browse CCTV, intercom, biometric and smart-lock services. Same-day booking, verified technicians, transparent pricing from ₹499." },
-      { property: "og:title", content: "All Security Services — SafeNest" },
+      { property: "og:title", content: "All Security Services — Zetaa Technologies" },
       { property: "og:description", content: "Verified technicians. Same-day service. Transparent pricing." },
     ],
   }),

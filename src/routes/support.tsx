@@ -7,7 +7,7 @@ import { Phone, MessageCircle, Mail, Clock } from "lucide-react";
 export const Route = createFileRoute("/support")({
   head: () => ({
     meta: [
-      { title: "Support — SafeNest" },
+      { title: "Support — Zetaa Technologies" },
       { name: "description", content: "Get help with bookings, installations and warranty. Reach our support team via call, WhatsApp or email." },
     ],
   }),
@@ -18,7 +18,7 @@ function SupportPage() {
   const channels = [
     { icon: Phone, title: "Call us", value: "+91 80000 12345", note: "Mon–Sun, 8am–10pm" },
     { icon: MessageCircle, title: "WhatsApp", value: "Chat with us", note: "Avg reply in 5 min" },
-    { icon: Mail, title: "Email", value: "help@safenest.in", note: "Reply within 12 hrs" },
+    { icon: Mail, title: "Email", value: "help@zetaatech.in", note: "Reply within 12 hrs" },
   ];
   const faqs = [
     { q: "How quickly can a technician reach me?", a: "Same-day visits are available in most metros if you book before 5pm. Otherwise we'll schedule the next slot you choose." },
