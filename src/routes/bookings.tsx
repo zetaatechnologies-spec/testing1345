@@ -8,7 +8,7 @@ import { Calendar, Inbox } from "lucide-react";
 export const Route = createFileRoute("/bookings")({
   head: () => ({
     meta: [
-      { title: "My Bookings — SafeNest" },
+      { title: "My Bookings — Zetaa Technologies" },
       { name: "description", content: "View and manage your security service bookings." },
     ],
   }),

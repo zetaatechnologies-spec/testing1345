@@ -11,7 +11,7 @@ export function TechnicianBand() {
           <div className="relative aspect-[4/5] max-w-md overflow-hidden rounded-3xl shadow-elevated">
             <img
               src={technicianImg}
-              alt="Verified SafeNest technician at the doorstep"
+              alt="Verified Zetaa Technologies technician at the doorstep"
               loading="lazy"
               width={1024}
               height={1280}
@@ -39,7 +39,7 @@ export function TechnicianBand() {
             Trained, uniformed, on time.
           </h2>
           <p className="mt-4 max-w-xl text-base text-primary-foreground/80">
-            Every SafeNest pro is background-verified, factory-trained on the brands we install,
+            Every Zetaa Technologies pro is background-verified, factory-trained on the brands we install,
             and rated after every visit. You know exactly who's at your door — before they ring the bell.
           </p>
 

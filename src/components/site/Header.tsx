@@ -13,7 +13,7 @@ export function Header() {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
             <ShieldCheck className="h-5 w-5" />
           </div>
-          <span className="font-display text-lg font-bold tracking-tight">SafeNest</span>
+          <span className="font-display text-lg font-bold tracking-tight">Zetaa Technologies</span>
         </Link>
 
         <div className="hidden flex-1 md:flex max-w-md mx-2">

@@ -14,13 +14,13 @@ import { TechnicianBand } from "@/components/site/TechnicianBand";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SafeNest — Book Trusted Security Experts Near You" },
+      { title: "Zetaa Technologies — Book Trusted Security Experts Near You" },
       {
         name: "description",
         content:
           "Book CCTV, intercom, biometric and smart-lock services with verified technicians. Same-day visits, 6-month warranty, transparent pricing from ₹499.",
       },
-      { property: "og:title", content: "SafeNest — Book Trusted Security Experts Near You" },
+      { property: "og:title", content: "Zetaa Technologies — Book Trusted Security Experts Near You" },
       {
         property: "og:description",
         content: "Verified technicians. Same-day service. Transparent pricing from ₹499.",

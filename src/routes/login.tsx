@@ -8,7 +8,7 @@ import { useState } from "react";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Login — SafeNest" },
+      { title: "Login — Zetaa Technologies" },
       { name: "description", content: "Sign in to manage bookings and AMC plans." },
     ],
   }),

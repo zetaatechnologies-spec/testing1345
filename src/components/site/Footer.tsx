@@ -11,7 +11,7 @@ export function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                 <ShieldCheck className="h-5 w-5" />
               </div>
-              <span className="font-display text-lg font-bold">SafeNest</span>
+              <span className="font-display text-lg font-bold">Zetaa Technologies</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Trusted home & business security services. Verified technicians, transparent pricing.
@@ -49,14 +49,14 @@ export function Footer() {
             <h4 className="font-semibold">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4" /> +91 80000 12345</li>
-              <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4" /> help@safenest.in</li>
+              <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4" /> help@zetaatech.in</li>
               <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4" /> Bengaluru • Mumbai • Delhi NCR • Pune • Hyderabad</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} SafeNest Technologies Pvt. Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Zetaa Technologies Technologies Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-foreground">Privacy</a>
             <a href="#" className="hover:text-foreground">Terms</a>

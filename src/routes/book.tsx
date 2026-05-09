@@ -13,9 +13,9 @@ export const Route = createFileRoute("/book")({
   }),
   head: () => ({
     meta: [
-      { title: "Book a Service — SafeNest" },
+      { title: "Book a Service — Zetaa Technologies" },
       { name: "description", content: "Book CCTV, intercom, biometric or smart-lock service in 3 simple steps. Same-day visits available." },
-      { property: "og:title", content: "Book a Service — SafeNest" },
+      { property: "og:title", content: "Book a Service — Zetaa Technologies" },
       { property: "og:description", content: "Same-day verified technicians. Transparent pricing." },
     ],
   }),

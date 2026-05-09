@@ -16,7 +16,7 @@ export function WhyChooseUs() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
-              Why families & businesses choose SafeNest
+              Why families & businesses choose Zetaa Technologies
             </h2>
             <p className="mt-3 text-muted-foreground">
               We obsess over reliability — from the first call to the final test of your system.
